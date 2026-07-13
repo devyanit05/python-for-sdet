@@ -107,6 +107,7 @@ print('Addition: ' + str(a))
 # -------------------------------------------------------------------------
 
 courses = ['Python', 'Java', 'C++', 'JavaScript']
+courses_2 = ['Go', 'Rust', 'Kotlin'] 
 
 
 print(courses)
@@ -116,5 +117,53 @@ print(courses[0:2]) # first two elements
 print(courses[::2]) # every second element
 print(courses[::-1]) # reverse the list
 print(len(courses)) # length of the list
+print(courses.append('C#')) # add an element to the end of the list
+print(courses.insert(1, 'Go')) # add an element at a specific index
 
+courses.insert(1, courses_2) # add a list at a specific index
+print(courses)
+
+courses.extend(courses_2) # add a list to the end of the list
+print(courses)
+
+courses.remove('Java') # remove an element from the list
+print(courses)
+
+courses.pop() # remove the last element from the list
+print(courses)
+
+print(courses.pop()) 
+print(courses)
+
+courses.pop(1) # remove an element at a specific index
+print(courses)
+
+courses.sort() # sort the list in ascending order
+print(courses)
+
+courses.sort(reverse=True) # sort the list in descending order
+print(courses)
+
+courses.reverse() # reverse the list
+print(courses)
+
+sorted_courses = sorted(courses) # sort the list in ascending order and return a new list
+print(sorted_courses)
+
+print(min(courses)) # return the minimum element in the list
+print(max(courses)) # return the maximum element in the list
+
+print(courses.index('Python')) # return the index of the first occurrence of the element
+
+print('Python' in courses) # check if the element is in the list
+print('Java' not in courses) # check if the element is not in the list
+
+for item in courses: # iterate through the list
+    print(item)
+
+for item in courses: # iterate through the list with index
+    print(courses.index(item), item, item.upper())
+
+courses.clear() # remove all elements from the list
+print(courses)
 
