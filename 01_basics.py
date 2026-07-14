@@ -164,6 +164,8 @@ for item in courses: # iterate through the list
 for item in courses: # iterate through the list with index
     print(courses.index(item), item, item.upper())
 
+
+
 courses.clear() # remove all elements from the list
 print(courses)
 
