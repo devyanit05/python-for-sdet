@@ -144,7 +144,7 @@ print(courses)
 courses.sort(reverse=True) # sort the list in descending order
 print(courses)
 
-courses.reverse() # reverse the list
+cour  ses.reverse() # reverse the list
 print(courses)
 
 sorted_courses = sorted(courses) # sort the list in ascending order and return a new list
@@ -164,8 +164,138 @@ for item in courses: # iterate through the list
 for item in courses: # iterate through the list with index
     print(courses.index(item), item, item.upper())
 
+courses = ['Python', 'Java', 'C++', 'JavaScript']
 
+for item in enumerate(courses): # iterate through the list with index
+    print(item)
+
+course_str = ', '.join(courses) # join the list into a string
+print(course_str)
+
+course_split = course_str.split(', ') # split the string into a list
+print(course_split)
 
 courses.clear() # remove all elements from the list
 print(courses)
 
+# -------------------------------------------------------------------------
+# Tuples
+# -------------------------------------------------------------------------
+
+# Lists are mutable and Tuples are immutable. Tuples are faster than lists. Tuples can be used as keys in dictionaries. 
+# Tuples can be used to return multiple values from a function.
+
+list1 = [1, 2, 3, 4, 5]
+tuple1 = (1, 2, 3, 4, 5)
+list2 = list1
+tuple2 = tuple1
+
+print(list1)
+print(list2)
+
+print(tuple1)
+print(tuple2)
+
+list1[0] = 10 # change the first element of the list
+print(list1)
+print(list2) # list2 is also changed because it is a reference to list1
+
+# tuple[0] = 10 # change the first element of the tuple
+print(tuple1) # this will give an error because tuples are immutable
+print(tuple2) # tuple2 is not changed because it is a reference to tuple1
+
+
+# -------------------------------------------------------------------------
+# Sets (sets are unordered collections of unique elements)
+# -------------------------------------------------------------------------
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+print(set1)
+
+set3 = set2
+print(set3)
+
+set5 = {'Python', 'TypeScript', 'C#', 'JavaScript'}
+print(set5)
+
+set6 = {'Python', 'Java', 'C++', 'JavaScript', 'Python'} # duplicate elements will be removed
+print(set6)
+
+print('Python' in set5) # check if the element is in the set
+print('TypeScript' in set6) # check if the element is in the set
+
+print(set5.intersection(set6)) # intersection of two sets
+print(set5.difference(set6)) # difference of two sets
+set4 = set1.union(set2) # union of two sets
+print(set4)
+
+set5.add('Go') # add an element to the set
+print(set5)
+
+# set is used to store unique elements. It is unordered and unindexed. 
+# It is mutable but cannot contain mutable elements like lists or dictionaries.
+
+#-----------------------------------------------------------
+
+# Create an empty list, tuple, and set
+empty_list = []
+empty_list = list() # using the list constructor
+empty_tuple = ()
+empty_tuple = tuple() # using the tuple constructor
+empty_set = {} # this creates an empty dictionary, not a set
+empty_set = set() # using the set constructor
+
+# -------------------------------------------------------------------------
+# Dictionaries (dictionaries are unordered collections of key-value pairs)
+# -------------------------------------------------------------------------
+
+dictionary = {'name': 'Devyani', 'age': 25, 'city': 'New York', 'is_student': False, 'skills': ['Python', 'Java', 'C++', 'JavaScript'], 'worksAt': 'Regnology', 'address': {'street': '123 Main St', 'city': 'New York', 'state': 'NY', 'zip': '10001'}, 'phone_numbers': ['123-456-7890', '987-654-3210'], 'email': 'devyani@example.com', 1: 'true'}
+print(dictionary)
+print(dictionary['name']) # access the value of the key 'name'
+print(dictionary.get('age')) # access the value of the key 'age'
+print(dictionary.get('gender', 'Not specified')) # access the value of the key 'gender', if it doesn't exist, return 'Not specified'
+print()
+print(dictionary.keys()) # return a list of all the keys in the dictionary
+print()
+print(dictionary.values()) # return a list of all the values in the dictionary
+print()
+print(dictionary.items()) # return a list of all the key-value pairs in the dictionary
+
+dictionary['age'] = 26 # change the value of the key 'age'
+print(dictionary)
+
+dictionary.pop('city') # remove the key 'city' and return its value
+print(dictionary)
+
+dictionary.popitem() # remove the last key-value pair and return it
+print(dictionary)
+
+dictionary.update({'city': 'Los Angeles', 'is_student': True}) # update the dictionary with new key-value pairs
+print(dictionary)
+
+for key, value in dictionary.items(): # iterate through the dictionary
+    print(key, value)
+
+for value in dictionary:
+    print(value) # iterate through the keys of the dictionary
+
+for key in dictionary:
+    print(key) # iterate through the keys of the dictionary
+
+for value in dictionary.values():
+    print(value) # iterate through the values of the dictionary
+
+for v in dictionary.items():
+    print(v) # iterate through the key-value pairs of the dictionary
+
+print()
+
+for key in dictionary.keys():
+    print(key) # iterate through the keys of the dictionary
+print()
+for key, value in dictionary.items():
+    print(f'Key: {key}, Value: {value}') # iterate through the key-value pairs of the dictionary
+print()
+for key, value in dictionary.items():
+    print(value)
